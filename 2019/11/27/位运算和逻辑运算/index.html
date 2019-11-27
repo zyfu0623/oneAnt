@@ -18,11 +18,16 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content>
+    <meta name="keywords" content="二进制">
 
 
-    <meta name="description" content="就是一个Hello World很高兴自己的个人博客建立成功以此记录自己工作中遇到的问题以此记录自己的学习历程以此记录一蚁的前行
-近期会陆陆续续的把自己的笔记都录上来，也算是一次复习欢迎前辈们指正...">
+    <meta name="description" content="||  和 &amp;&amp; ---短路逻辑运算符
+
+进行逻辑运算， 只要有一个条件未true返回true， 后面的条件不再进行判断
+
+| 和 &amp; 
+
+1.进行逻辑运算， 所有的条件...">
 
 
 
@@ -34,7 +39,7 @@
     <!--Title-->
 
 
-<title>Hello World | 一蚁</title>
+<title>位运算和逻辑运算 | 一蚁</title>
 
 
     <link rel="alternate" href="/atom.xml" title="一蚁" type="application/atom+xml">
@@ -137,16 +142,16 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="Hello World">
+        <h1 id="位运算和逻辑运算">
             
-	            Hello World
+	            位运算和逻辑运算
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            
+            <a class="category-link" href="/categories/backGround/">backGround</a>
         </span>
     
 
@@ -154,6 +159,8 @@
         <span class="fa-wrap">
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
+                
+                    <a class="tag-link" href="/tags/二进制/">二进制</a>
                 
             </span>
         </span>
@@ -163,7 +170,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2019/11/03</span>
+            <span class="date-meta">2019/11/27</span>
         </span>
         
             <span class="fa-wrap">
@@ -178,9 +185,26 @@
     </div>
     
     <div class="post-body post-content">
-        <p>就是一个Hello World<br>很高兴自己的个人博客建立成功<br>以此记录自己工作中遇到的问题<br>以此记录自己的学习历程<br>以此记录一蚁的前行</p>
-<p>近期会陆陆续续的把自己的笔记都录上来，也算是一次复习<br>欢迎前辈们指正！！！</p>
+        <pre><code>||  和 &amp;&amp; ---短路逻辑运算符
 
+进行逻辑运算， 只要有一个条件未true返回true， 后面的条件不再进行判断
+
+| 和 &amp; 
+
+1.进行逻辑运算， 所有的条件都会进行判断， 结果为true才会返回true
+
+2. 进行位运算
+
+System.out.println(11 &amp; 7)        5
+System.out.println(11 | 7)         15
+
+11        -&gt;    00000000 00000000 00000000 00001101
+
+7          -&gt;    00000000 00000000 00000000 00000101
+
+&amp; 都是1 才是1
+
+“|”    有一个是1 就是1</code></pre>
     </div>
     
         <div class="reward" ontouchstart>
@@ -217,15 +241,10 @@
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2019/11/27/位运算和逻辑运算/" class="pre-post btn btn-default" title='位运算和逻辑运算'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">位运算和逻辑运算</span>
-        </a>
     
-    
-        <a href="/2019/08/04/maven_orders/" class="next-post btn btn-default" title='Maven指令记录'>
+        <a href="/2019/11/03/hello-world/" class="next-post btn btn-default" title='Hello World'>
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">Maven指令记录</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">Hello World</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
