@@ -18,16 +18,22 @@
     <link rel="dns-prefetch" href="http://yoursite.com">
     <!--SEO-->
 
-    <meta name="keywords" content="二进制">
+    <meta name="keywords" content="策略模式,OO设计原则">
 
 
-    <meta name="description" content="||  和 &amp;&amp; ---短路逻辑运算符
+    <meta name="description" content="OO基础
+抽象
+封装
+继承 
+多态
 
-进行逻辑运算， 只要有一个条件未true返回true， 后面的条件不再进行判断
+OO原则
+封装变化
+多用组合，少用继承
+针对接口编程，不针对实现编程  
 
-| 和 &amp; 
-
-1.进行逻辑运算， 所有的条件...">
+OO 模式
+策略模式： 定义算法族， 分别封装起来，让它们之间可以相互替换，此模...">
 
 
 
@@ -39,7 +45,7 @@
     <!--Title-->
 
 
-<title>位运算和逻辑运算 | 一蚁</title>
+<title>Head-First-设计模式-策略模式-总结 | 一蚁</title>
 
 
     <link rel="alternate" href="/atom.xml" title="一蚁" type="application/atom+xml">
@@ -142,16 +148,16 @@
                     <p id="process"></p>
 <article class="post">
     <div class="post-head">
-        <h1 id="位运算和逻辑运算">
+        <h1 id="Head-First-设计模式-策略模式-总结">
             
-	            位运算和逻辑运算
+	            Head-First-设计模式-策略模式-总结
             
         </h1>
         <div class="post-meta">
     
         <span class="categories-meta fa-wrap">
             <i class="fa fa-folder-open-o"></i>
-            <a class="category-link" href="/categories/backGround/">backGround</a>
+            <a class="category-link" href="/categories/background/">background</a> <a class="category-link" href="/categories/background/设计模式/">设计模式</a>
         </span>
     
 
@@ -160,7 +166,7 @@
             <i class="fa fa-tags"></i>
             <span class="tags-meta">
                 
-                    <a class="tag-link" href="/tags/二进制/">二进制</a>
+                    <a class="tag-link" href="/tags/OO设计原则/">OO设计原则</a> <a class="tag-link" href="/tags/策略模式/">策略模式</a>
                 
             </span>
         </span>
@@ -170,7 +176,7 @@
         
         <span class="fa-wrap">
             <i class="fa fa-clock-o"></i>
-            <span class="date-meta">2019/11/27</span>
+            <span class="date-meta">2019/11/28</span>
         </span>
         
             <span class="fa-wrap">
@@ -185,26 +191,33 @@
     </div>
     
     <div class="post-body post-content">
-        <pre><code>||  和 &amp;&amp; ---短路逻辑运算符
+        <h2 id="OO基础"><a href="#OO基础" class="headerlink" title="OO基础"></a>OO基础</h2><ul>
+<li>抽象</li>
+<li>封装</li>
+<li>继承 </li>
+<li>多态</li>
+</ul>
+<h2 id="OO原则"><a href="#OO原则" class="headerlink" title="OO原则"></a>OO原则</h2><ul>
+<li>封装变化</li>
+<li>多用组合，少用继承</li>
+<li>针对接口编程，不针对实现编程  </li>
+</ul>
+<h2 id="OO-模式"><a href="#OO-模式" class="headerlink" title="OO 模式"></a>OO 模式</h2><ul>
+<li>策略模式： 定义算法族， 分别封装起来，让它们之间可以相互替换，此模式让算法的变化独立于使用算法的客户。  </li>
+</ul>
+<h4 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h4><ul>
+<li>知道OO基础， 并不足以让你设计出良好的系统</li>
+<li>良好的OO设计必须具备 可复用、可扩充、可维护 三个特性</li>
+<li>模式可以让我们建造出具有良好OO设计质量的系统。</li>
+<li>模式被认为是历经验证的OO设计经验</li>
+<li>模式不是代码， 而是针对设计问题的通用解决方案。可应用到特点的应用中。</li>
+<li>模式不是被发明，而是被发现</li>
+<li>大多数的模式和原则，都着眼于软件变化这一主题</li>
+<li>大多数的模式都允许系统局部改变独立于其部分</li>
+<li>通常我们把系统中会变化的部分抽出来封装</li>
+<li>模式让开发人员之间有共享的语言，能够最大化沟通的价值</li>
+</ul>
 
-进行逻辑运算， 只要有一个条件未true返回true， 后面的条件不再进行判断
-
-| 和 &amp; 
-
-1.进行逻辑运算， 所有的条件都会进行判断， 结果为true才会返回true
-
-2. 进行位运算
-
-System.out.println(11 &amp; 7)        5
-System.out.println(11 | 7)         15
-
-11        -&gt;    00000000 00000000 00000000 00001101
-
-7          -&gt;    00000000 00000000 00000000 00000101
-
-&amp; 都是1 才是1
-
-“|”    有一个是1 就是1</code></pre>
     </div>
     
         <div class="reward" ontouchstart>
@@ -241,15 +254,10 @@ System.out.println(11 | 7)         15
 
 <div class="article-nav prev-next-wrap clearfix">
     
-        <a href="/2019/11/27/Head-Firsh-设计模式-策略模式/" class="pre-post btn btn-default" title='Head Firsh 设计模式-策略模式'>
-            <i class="fa fa-angle-left fa-fw"></i><span class="hidden-lg">上一篇</span>
-            <span class="hidden-xs">Head Firsh 设计模式-策略模式</span>
-        </a>
     
-    
-        <a href="/2019/11/03/hello-world/" class="next-post btn btn-default" title='Hello World'>
+        <a href="/2019/11/27/Head-Firsh-设计模式-策略模式/" class="next-post btn btn-default" title='Head Firsh 设计模式-策略模式'>
             <span class="hidden-lg">下一篇</span>
-            <span class="hidden-xs">Hello World</span><i class="fa fa-angle-right fa-fw"></i>
+            <span class="hidden-xs">Head Firsh 设计模式-策略模式</span><i class="fa fa-angle-right fa-fw"></i>
         </a>
     
 </div>
@@ -292,7 +300,7 @@ System.out.println(11 | 7)         15
     <div class="widget">
         <h3 class="title">文章目录</h3>
         
-            <p>暂无目录</p>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#OO基础"><span class="toc-text">OO基础</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OO原则"><span class="toc-text">OO原则</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#OO-模式"><span class="toc-text">OO 模式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#要点"><span class="toc-text">要点</span></a></li></ol></li></ol></li></ol>
         
     </div>
 </aside>

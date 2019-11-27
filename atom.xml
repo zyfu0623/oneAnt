@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-27T02:05:19.428Z</updated>
+  <updated>2019-11-27T16:33:57.983Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,72 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Head-First-设计模式-策略模式-总结</title>
+    <link href="http://yoursite.com/2019/11/28/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/"/>
+    <id>http://yoursite.com/2019/11/28/策略模式总结/</id>
+    <published>2019-11-27T16:13:53.000Z</published>
+    <updated>2019-11-27T16:33:57.983Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="OO基础"><a href="#OO基础" class="headerlink" title="OO基础"></a>OO基础</h2><ul><li>抽象</li><li>封装</li><li>继承 </li><li>多态</li></ul><h2 id="OO原则"><a href="#OO原则" class="headerlink" title="OO原则"></a>OO原则</h2><ul><li>封装变化</li><li>多用组合，少用继承</li><li>针对接口编程，不针对实现编程  </li></ul><h2 id="OO-模式"><a href="#OO-模式" class="headerlink" title="OO 模式"></a>OO 模式</h2><ul><li>策略模式： 定义算法族， 分别封装起来，让它们之间可以相互替换，此模式让算法的变化独立于使用算法的客户。  </li></ul><h4 id="要点"><a href="#要点" class="headerlink" title="要点"></a>要点</h4><ul><li>知道OO基础， 并不足以让你设计出良好的系统</li><li>良好的OO设计必须具备 可复用、可扩充、可维护 三个特性</li><li>模式可以让我们建造出具有良好OO设计质量的系统。</li><li>模式被认为是历经验证的OO设计经验</li><li>模式不是代码， 而是针对设计问题的通用解决方案。可应用到特点的应用中。</li><li>模式不是被发明，而是被发现</li><li>大多数的模式和原则，都着眼于软件变化这一主题</li><li>大多数的模式都允许系统局部改变独立于其部分</li><li>通常我们把系统中会变化的部分抽出来封装</li><li>模式让开发人员之间有共享的语言，能够最大化沟通的价值</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;OO基础&quot;&gt;&lt;a href=&quot;#OO基础&quot; class=&quot;headerlink&quot; title=&quot;OO基础&quot;&gt;&lt;/a&gt;OO基础&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;抽象&lt;/li&gt;
+&lt;li&gt;封装&lt;/li&gt;
+&lt;li&gt;继承 &lt;/li&gt;
+&lt;li&gt;多态&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 i
+      
+    
+    </summary>
+    
+      <category term="background" scheme="http://yoursite.com/categories/background/"/>
+    
+      <category term="设计模式" scheme="http://yoursite.com/categories/background/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+    
+      <category term="策略模式" scheme="http://yoursite.com/tags/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="OO设计原则" scheme="http://yoursite.com/tags/OO%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Head Firsh 设计模式-策略模式</title>
+    <link href="http://yoursite.com/2019/11/27/Head-Firsh-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://yoursite.com/2019/11/27/Head-Firsh-设计模式-策略模式/</id>
+    <published>2019-11-27T14:37:24.000Z</published>
+    <updated>2019-11-27T16:29:32.212Z</updated>
+    
+    <content type="html"><![CDATA[<p>使用模式的最好方式：—经验复用</p><pre><code>把模式装进脑子里，然后在你的设计和已有的应用中， 寻找何处可以使用他们。</code></pre><p>Duck     鸭子超类， 所有的鸭子继承该类</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">quack(); // 呱呱叫</span><br><span class="line">swim();//游泳</span><br><span class="line">display(); //外观</span><br></pre></td></tr></table></figure><p>现在让鸭子飞起来？！！！<br><code>fly();</code><br>导致所有的鸭子都能飞起来。。。。<br><font color="red">当设计“维护”时， 为了“复用”目的而使用继承，结局并不完美。</font></p><p>#####方式1<br>子类重写 fly(); 方法， 方法体内什么都不做<br>缺点：  </p><ol><li><p>代码在多个子类中重复  </p></li><li><p>改变会牵一发而动全身， 造成其他鸭子类不想要的改变  </p></li><li><p>运行时的行为不容易改变<br>#####利用接口<br>把fly() 方法从超类中拿出来， 放入一个Flyable接口中，只有会飞的鸭子才实现该接口；<br>同样quack()方法提取到 Quackable 接口中，因为并不是所有的鸭子都会呱呱叫(例如橡皮鸭子)<br>缺点：<br>代码复用率低  </p><p> 如果能有一种方法，让我们可以用一种对既有的代码影响最小的方式来修改软件， 那该多好！<br> 这样我们就可以花较小的时间重做代码，而多让程序去做更酷的事。  </p></li></ol><p>软件开发的真理：<br><font color="red">不管设计的多好，一段时间之后，总是需要成长和改变，否则软件就会“死亡”</font></p><p>引入<font color="red">设计原则</font>：  </p><ul><li><p>找出应用中可能需要变化之处，把它们独立出来，不要和那些不需要变化的代码混在一起<br>如果每次新的需求一来， 都会使某些代码发生变化，那么就可以确定，这部门的代码需要被抽出来，和其他稳定的代码有所区分。  </p></li><li><p>针对接口编程，而不是针对实现编程  </p></li></ul><p>针对接口编程：意思是“针对超类型（supertype）编程”</p><p>处理  </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line">package com.zyfu.fakecode;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line"> * 超类鸭子</span><br><span class="line"> */</span><br><span class="line">public abstract class Duck &#123;</span><br><span class="line">    FlyBehavior flyBehavior;</span><br><span class="line"></span><br><span class="line">    abstract void display();</span><br><span class="line"></span><br><span class="line">    public void swim()&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    public void setFlyBehavior(FlyBehavior flyBehavior) &#123;</span><br><span class="line">        this.flyBehavior = flyBehavior;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public FlyBehavior getFlyBehavior() &#123;</span><br><span class="line">        return flyBehavior;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">/**</span><br><span class="line">* 子类红头鸭子</span><br><span class="line">**/</span><br><span class="line">class RedHeadDuck extends Duck &#123;</span><br><span class="line"></span><br><span class="line">    public RedHeadDuck() &#123;</span><br><span class="line">        this.flyBehavior = new FlyWithWings();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @Override</span><br><span class="line">    void display() &#123;</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//飞行行为接口</span><br><span class="line">interface FlyBehavior&#123;</span><br><span class="line">    void fly();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">//实现类---翅膀飞行</span><br><span class="line">class FlyWithWings implements FlyBehavior&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void fly() &#123;</span><br><span class="line">        System.out.println(&quot;用翅膀飞行&quot;);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">//实现类---什么都不做</span><br><span class="line">class FlyNoWay implements FlyBehavior&#123;</span><br><span class="line">    @Override</span><br><span class="line">    public void fly() &#123;</span><br><span class="line">        //什么也不做</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>“有一个”可能比“是一个”更好<br>上面将两个类结合起来使用， 这就是组合(composition)。 这种做法与“继承”不同的地方在于，行为不是继承来的，而是和适当的行为对象“组合”起来的  </p><ul><li>多用组合， 少用继承<br>使用组合建立系统具有很大的弹性，不仅可将算法封装成类， 更可以 “在运行时动态的改变行为”，只要组合的“行为对象”符合正确的接口标准即可。  </li></ul><p>以上的思路就是<font color="red">策略模式</font>  </p><p>###策略模式<br>定义了算法族， 分别封装起来， 让它们之间可以互相替换，此模式让算法的变换独立于使用算法的客户。  </p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;使用模式的最好方式：—经验复用&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;把模式装进脑子里，然后在你的设计和已有的应用中， 寻找何处可以使用他们。&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Duck     鸭子超类， 所有的鸭子继承该类&lt;/p&gt;
+&lt;figure class=&quot;highlight 
+      
+    
+    </summary>
+    
+      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="background" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/background/"/>
+    
+    
+      <category term="策略模式" scheme="http://yoursite.com/tags/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    
+      <category term="OO设计原则" scheme="http://yoursite.com/tags/OO%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+    
+  </entry>
   
   <entry>
     <title>位运算和逻辑运算</title>
