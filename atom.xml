@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>一蚁</title>
+  
+  <subtitle>A stray ant can only move by itself</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2019-08-04T04:58:49.862Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>一蚁</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2019/11/03/hello-world/"/>
+    <id>http://yoursite.com/2019/11/03/hello-world/</id>
+    <published>2019-11-03T05:56:18.616Z</published>
+    <updated>2019-08-04T04:58:49.862Z</updated>
+    
+    <content type="html"><![CDATA[<p>就是一个Hello World<br>很高兴自己的个人博客建立成功<br>以此记录自己工作中遇到的问题<br>以此记录自己的学习历程<br>以此记录一蚁的前行</p><p>近期会陆陆续续的把自己的笔记都录上来，也算是一次复习<br>欢迎前辈们指正！！！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;就是一个Hello World&lt;br&gt;很高兴自己的个人博客建立成功&lt;br&gt;以此记录自己工作中遇到的问题&lt;br&gt;以此记录自己的学习历程&lt;br&gt;以此记录一蚁的前行&lt;/p&gt;
+&lt;p&gt;近期会陆陆续续的把自己的笔记都录上来，也算是一次复习&lt;br&gt;欢迎前辈们指正！！！&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Maven指令记录</title>
+    <link href="http://yoursite.com/2019/08/04/maven_orders/"/>
+    <id>http://yoursite.com/2019/08/04/maven_orders/</id>
+    <published>2019-08-04T05:11:25.000Z</published>
+    <updated>2019-08-04T06:31:38.197Z</updated>
+    
+    <content type="html"><![CDATA[<p>基本上使用IDE 进行开发，maven命令都可以直接在开发工具中快捷执行，这就造成了自己根本没有留意过这一块的内容。</p><h2 id="install-命令，-将jar包安装到本地仓库"><a href="#install-命令，-将jar包安装到本地仓库" class="headerlink" title="install 命令， 将jar包安装到本地仓库"></a>install 命令， 将jar包安装到本地仓库</h2><p>别人给了一个jar包， maven仓库中也没有，项目中需要引用，杂么办？<br>install 命令，将jar包安装到本地仓库，然后把本地仓库中的 该jar包install 后的内容复制的内网的公共仓库</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn install:install-file -Dfile=F:\xxxxx.jar -DgroupId=xxx.xxx -DartifactId=xxxx -Dversion=18.8 -Dpackaging=jar</span><br></pre></td></tr></table></figure><h2 id="拷贝依赖"><a href="#拷贝依赖" class="headerlink" title="拷贝依赖"></a>拷贝依赖</h2><p>公司为客户做了一个小工具，打包项目时要求把依赖放入一个文件夹下面，然后找到了下面这个命令</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mvn dependency:copy-dependencies -DoutputDirectory=lib</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;基本上使用IDE 进行开发，maven命令都可以直接在开发工具中快捷执行，这就造成了自己根本没有留意过这一块的内容。&lt;/p&gt;
+&lt;h2 id=&quot;install-命令，-将jar包安装到本地仓库&quot;&gt;&lt;a href=&quot;#install-命令，-将jar包安装到本地仓库&quot; clas
+      
+    
+    </summary>
+    
+      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+    
+      <category term="Maven" scheme="http://yoursite.com/categories/backGround/Maven/"/>
+    
+    
+      <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>初识springBoot</title>
+    <link href="http://yoursite.com/2019/08/04/new_springBoot/"/>
+    <id>http://yoursite.com/2019/08/04/new_springBoot/</id>
+    <published>2019-08-04T05:07:10.000Z</published>
+    <updated>2019-08-04T05:33:05.247Z</updated>
+    
+    <content type="html"><![CDATA[<p>spring boot 踩坑<br>创建简单的web 项目，只实现web 页面展示，不涉及业务处理</p><ol><li><p>idea 新建项目，采用 Spring Initializr 创建项目， 选择 web 依赖</p></li><li><p>项目创建成功后<br>创建展示层目录： src/main/webapp,<br>在 webapp下创建目录 WEB-INF ,<br>在WEB-INF 下创建 index.jsp 文件</p></li><li><p>配置spring boot 启动器</p> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">@SpringBootApplication</span><br><span class="line">   public class Applicaion extends SpringBootServletInitializer&#123;</span><br><span class="line">   public static main(String args[])&#123;</span><br><span class="line">   SpringApplication.run(Applicaion.class, args);</span><br><span class="line">   &#125;</span><br><span class="line">   //重写configure 方法</span><br><span class="line">   protected SpringApplicationBuilder configure(SpringApplicationBuilder builder)&#123;</span><br><span class="line">   <span class="built_in">return</span> builder.sources(Applicaion.class);</span><br><span class="line">   &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure></li></ol><ol start="4"><li>配置文件设置 ： application.properties  <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">spring.mvc.view.perfix=/WEB-INF/</span><br><span class="line">   spring.mvc.view.suffix=.jsp</span><br></pre></td></tr></table></figure></li></ol><ol start="5"><li>添加jsp 支持， 如果需要使用EL 表达式， 再添加JSTL 支持，打开pom.xml文件 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;&lt;!--  jsp 支持 --&gt;</span><br><span class="line">   &lt;groupId&gt;org.apache.tomcat.embed&lt;/groupId&gt;</span><br><span class="line">   &lt;artifactId&gt;tomcat-embed-jasper&lt;/artifactId&gt;</span><br><span class="line">   &lt;/dependency&gt;</span><br><span class="line">   </span><br><span class="line">   &lt;dependency&gt; &lt;!--  jstl 支持 --&gt;</span><br><span class="line">   &lt;groupId&gt;javax.servlet&lt;/groupId&gt;</span><br><span class="line">   &lt;artifactId&gt;jstl&lt;/artifactId&gt;</span><br><span class="line">   &lt;/dependency&gt;</span><br></pre></td></tr></table></figure></li></ol><ol start="6"><li><p>添加一个 Controller , 注意所在的目录</p><pre><code class="bash">import org.springframework.web.bind.annotation.RequestMapping;    import org.springframework.web.bind.annotation.RestController;    import org.springframework.web.servlet.ModelAndView;    @RestController    public class LoginController {        @RequestMapping(value ={ <span class="string">"/"</span>, <span class="string">"/index"</span>})        public ModelAndView <span class="function"><span class="title">index</span></span>(){            ModelAndView view = new ModelAndView(<span class="string">"index"</span>);            <span class="built_in">return</span> view;        }    }</code></pre></li><li><p>@RestController 与 @Controller 之间的不同<br> @RestController 相当于 @RequestMapping 和 @ResponseBody 结合，</p><pre><code>方法返回值为 String  返回单纯的字符串， 方法返回值为 ModelAndView 为一个页面</code></pre><p> @Controller </p><pre><code>方法返回值为 String  返回一个页面， 方法返回值为 ModelAndView 为一个页面， 返回对象需要在方法上添加@ResponseBody注解</code></pre></li><li><p>@RequestMapping 路径匹配，<br>可在类，方法上添加;<br>一个方法匹配多个路径 {“/index”,  “/login” } ,使用大括号括起来;<br>中间用逗号隔开。</p></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;spring boot 踩坑&lt;br&gt;创建简单的web 项目，只实现web 页面展示，不涉及业务处理&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;idea 新建项目，采用 Spring Initializr 创建项目， 选择 web 依赖&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;项目创建成功后
+      
+    
+    </summary>
+    
+      <category term="springBoot" scheme="http://yoursite.com/categories/springBoot/"/>
+    
+    
+      <category term="backGround" scheme="http://yoursite.com/tags/backGround/"/>
+    
+      <category term="springBoot" scheme="http://yoursite.com/tags/springBoot/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【javaSE】</title>
+    <link href="http://yoursite.com/2019/08/04/jav_se/"/>
+    <id>http://yoursite.com/2019/08/04/jav_se/</id>
+    <published>2019-08-04T05:04:46.000Z</published>
+    <updated>2019-08-04T05:33:04.972Z</updated>
+    
+    <content type="html"><![CDATA[<p>将list集合转化为js 可以遍历的json 对象</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">JSONArray.toJSON(prjCategoryInfoList)</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;将list集合转化为js 可以遍历的json 对象&lt;/p&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td
+      
+    
+    </summary>
+    
+      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+    
+      <category term="javaSE" scheme="http://yoursite.com/categories/backGround/javaSE/"/>
+    
+    
+      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>EL表达式不起作用问题排查</title>
+    <link href="http://yoursite.com/2019/08/04/el_error/"/>
+    <id>http://yoursite.com/2019/08/04/el_error/</id>
+    <published>2019-08-04T04:49:39.000Z</published>
+    <updated>2019-08-04T05:33:05.202Z</updated>
+    
+    <content type="html"><![CDATA[<p>EL 表达式 &lt;%@ page isELIgnored=”true | false”%&gt; 用于指定el 表达式是否被忽略</p><p>web.xml中  :web-app_2_4.xsd”&gt;默认为 false,表示启用<br>2.4之前的版本默认为true,表示忽略EL 表达式.</p><h2 id="所以老版本的web-app-尽早改了吧"><a href="#所以老版本的web-app-尽早改了吧" class="headerlink" title="所以老版本的web-app 尽早改了吧"></a>所以老版本的web-app 尽早改了吧</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;EL 表达式 &amp;lt;%@ page isELIgnored=”true | false”%&amp;gt; 用于指定el 表达式是否被忽略&lt;/p&gt;
+&lt;p&gt;web.xml中  :web-app_2_4.xsd”&amp;gt;默认为 false,表示启用&lt;br&gt;2.4之前的版本默认为tru
+      
+    
+    </summary>
+    
+      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+    
+      <category term="jsp" scheme="http://yoursite.com/categories/backGround/jsp/"/>
+    
+    
+      <category term="jsp" scheme="http://yoursite.com/tags/jsp/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>文件下载中文名称乱码问题</title>
+    <link href="http://yoursite.com/2019/08/04/downFile_chinese/"/>
+    <id>http://yoursite.com/2019/08/04/downFile_chinese/</id>
+    <published>2019-08-04T04:45:37.000Z</published>
+    <updated>2019-08-04T05:33:04.923Z</updated>
+    
+    <content type="html"><![CDATA[<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">     * 设置文件名响应头</span><br><span class="line">     * @param response response</span><br><span class="line">     * @param request request</span><br><span class="line">     * @param fileName 文件名</span><br><span class="line">     * @throws UnsupportedEncodingException</span><br><span class="line">     */</span><br><span class="line">    private void setFileNameToResponse(HttpServletResponse response, HttpServletRequest request, String fileName) throws UnsupportedEncodingException &#123;</span><br><span class="line">        <span class="keyword">if</span> (fileName != null)&#123;</span><br><span class="line">            String userAgent = request.getHeader(<span class="string">"User-Agent"</span>).toLowerCase();</span><br><span class="line">            <span class="keyword">if</span>(userAgent.contains(<span class="string">"msie"</span>) || userAgent.contains(<span class="string">"trident"</span>) || userAgent.contains(<span class="string">"edge"</span>))&#123;</span><br><span class="line">                fileName = URLEncoder.encode(fileName, <span class="string">"UTF-8"</span>);</span><br><span class="line">                fileName=fileName.replaceAll(<span class="string">"\\+"</span>,<span class="string">"%20"</span>);//处理空格展示成加号的问题</span><br><span class="line">            &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                fileName = new String(fileName.getBytes(),<span class="string">"ISO8859-1"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            response.setHeader(<span class="string">"Content-disposition"</span>, String.format(<span class="string">"attachment; filename=\"%s\""</span>, fileName));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=
+      
+    
+    </summary>
+    
+      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+    
+      <category term="文件下载" scheme="http://yoursite.com/categories/backGround/%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/"/>
+    
+    
+      <category term="spring" scheme="http://yoursite.com/tags/spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>【MySQL】事务没有提交导致锁等待</title>
+    <link href="http://yoursite.com/2019/08/04/mysql_transations/"/>
+    <id>http://yoursite.com/2019/08/04/mysql_transations/</id>
+    <published>2019-08-04T04:34:08.000Z</published>
+    <updated>2019-08-04T05:33:05.350Z</updated>
+    
+    <content type="html"><![CDATA[<p>【MySQL】事务没有提交导致 锁等待</p><h2 id="Lock-wait-timeout-exceeded异常的处理办法"><a href="#Lock-wait-timeout-exceeded异常的处理办法" class="headerlink" title="Lock wait timeout exceeded异常的处理办法"></a>Lock wait timeout exceeded异常的处理办法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">select * from information_schema.innodb_trx;</span><br></pre></td></tr></table></figure><p>之后找到了一个一直没有提交的事务。</p><p>kill 到了对应的线程后ok了。</p><p>查看所有的进程列表：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">show processlist;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;【MySQL】事务没有提交导致 锁等待&lt;/p&gt;
+&lt;h2 id=&quot;Lock-wait-timeout-exceeded异常的处理办法&quot;&gt;&lt;a href=&quot;#Lock-wait-timeout-exceeded异常的处理办法&quot; class=&quot;headerlink&quot; title=
+      
+    
+    </summary>
+    
+      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+    
+      <category term="MySQL" scheme="http://yoursite.com/categories/backGround/MySQL/"/>
+    
+    
+      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>linux服务器tomcat启动但浏览器访问不了</title>
+    <link href="http://yoursite.com/2019/08/04/toStartTomcat/"/>
+    <id>http://yoursite.com/2019/08/04/toStartTomcat/</id>
+    <published>2019-08-04T04:31:28.000Z</published>
+    <updated>2019-08-04T05:33:04.869Z</updated>
+    
+    <content type="html"><![CDATA[<p>首先服务器是阿里云云服务器<br>tomcat是成功启动，但是浏览器就是打不开， tomcat日志也没问题，firewalld里8080端口号也加了。<br>服务器的实例，添加一组入方向的安全组规则(协议类型:自定义TCP<br>端口范围:22/8081  授权类型:地址段访问 授权对象:0.0.0.0/0 )，然后浏览器刷新</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;首先服务器是阿里云云服务器&lt;br&gt;tomcat是成功启动，但是浏览器就是打不开， tomcat日志也没问题，firewalld里8080端口号也加了。&lt;br&gt;服务器的实例，添加一组入方向的安全组规则(协议类型:自定义TCP&lt;br&gt;端口范围:22/8081  授权类型:地址段
+      
+    
+    </summary>
+    
+      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+    
+      <category term="linux" scheme="http://yoursite.com/categories/backGround/linux/"/>
+    
+      <category term="tomcat" scheme="http://yoursite.com/categories/backGround/linux/tomcat/"/>
+    
+    
+      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+    
+      <category term="tomcat" scheme="http://yoursite.com/tags/tomcat/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>idea加快创建Maven项目速度</title>
+    <link href="http://yoursite.com/2019/08/04/idea_create_maven/"/>
+    <id>http://yoursite.com/2019/08/04/idea_create_maven/</id>
+    <published>2019-08-04T04:29:19.000Z</published>
+    <updated>2019-08-04T05:33:05.159Z</updated>
+    
+    <content type="html"><![CDATA[<p>Intellij Idea 创建maven项目 配置参数，提高创建速度<br>archetypeCatalog=internal</p><p>idea 开发工具:is 开头的boolean类型参数,<br>更改get /set 方法的方法名, 避免造成参数名与实际获取的参数名不一致问题</p><p>注：貌似eclipse 也有相同的问题吧？</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Intellij Idea 创建maven项目 配置参数，提高创建速度&lt;br&gt;archetypeCatalog=internal&lt;/p&gt;
+&lt;p&gt;idea 开发工具:is 开头的boolean类型参数,&lt;br&gt;更改get /set 方法的方法名, 避免造成参数名与实际获取的参
+      
+    
+    </summary>
+    
+      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+    
+      <category term="idea" scheme="http://yoursite.com/categories/backGround/idea/"/>
+    
+      <category term="Maven" scheme="http://yoursite.com/categories/backGround/idea/Maven/"/>
+    
+    
+      <category term="idea" scheme="http://yoursite.com/tags/idea/"/>
+    
+      <category term="maven" scheme="http://yoursite.com/tags/maven/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>前端js常见问题</title>
+    <link href="http://yoursite.com/2019/08/04/js_faults/"/>
+    <id>http://yoursite.com/2019/08/04/js_faults/</id>
+    <published>2019-08-04T04:20:45.000Z</published>
+    <updated>2019-08-04T05:33:05.302Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="textarea"><a href="#textarea" class="headerlink" title="textarea"></a>textarea</h2><p>textarea的text属性与value属性注意区分，发送到服务器的是value值</p><h2 id="select标签"><a href="#select标签" class="headerlink" title="select标签"></a>select标签</h2><p>select标签通过js生成的option设置默认选中状态必须在生成的过程中进行设置，<br>在生成后设置:$(“select””).val()  和$(“select””).find(“option[value=”+yes+”]””).attr(“selected””,”selected””)都不会生效；<br>input 标签不填任何内容值为  “”</p><p>前端js 代码中遍历 key:value结构数据</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(var key <span class="keyword">in</span> obj)&#123;//key为map集合中的每个元素的key</span><br><span class="line">var value = obj[key]// value 为对应key 对应的value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>遍历json 对象 与遍历map相同</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(var item <span class="keyword">in</span> person)&#123;</span><br><span class="line">alert(<span class="string">"person中"</span>+item+<span class="string">"的值="</span>+person[item]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><hr><h2 id="数组删除指定元素的方法"><a href="#数组删除指定元素的方法" class="headerlink" title="数组删除指定元素的方法"></a>数组删除指定元素的方法</h2><p>方法一：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">//定义删除方法</span><br><span class="line">Array.prototype.remove = <span class="keyword">function</span>(val) &#123;</span><br><span class="line">    var index = this.indexOf(val);</span><br><span class="line">    <span class="keyword">if</span> (index &gt; -1) &#123;</span><br><span class="line">        this.splice(index, 1);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line">// 定义查询下标的方法 </span><br><span class="line">Array.prototype.indexOf = <span class="keyword">function</span>(val) &#123;</span><br><span class="line">    <span class="keyword">for</span> (var i = 0; i &lt; this.length; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (this[i] == val) <span class="built_in">return</span> i;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">return</span> -1;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><p>方法二：<br>array 表示数组，item表示数组中的元素,<br>$.inArray 获取item在array 中的下标，splice(index, num)表示从index位置开始删除num个元素</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">array.splice($.inArray(item, array), 1);</span><br></pre></td></tr></table></figure><h2 id="复制一个对象中的数据到新的对象中"><a href="#复制一个对象中的数据到新的对象中" class="headerlink" title="复制一个对象中的数据到新的对象中"></a>复制一个对象中的数据到新的对象中</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$.extend(newData, oldData);</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;textarea&quot;&gt;&lt;a href=&quot;#textarea&quot; class=&quot;headerlink&quot; title=&quot;textarea&quot;&gt;&lt;/a&gt;textarea&lt;/h2&gt;&lt;p&gt;textarea的text属性与value属性注意区分，发送到服务器的是value值&lt;/p&gt;
+      
+    
+    </summary>
+    
+      <category term="forward" scheme="http://yoursite.com/categories/forward/"/>
+    
+      <category term="js" scheme="http://yoursite.com/categories/forward/js/"/>
+    
+      <category term="jQuery" scheme="http://yoursite.com/categories/forward/js/jQuery/"/>
+    
+    
+      <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>mybatis采坑</title>
+    <link href="http://yoursite.com/2019/08/04/mybatis_faults/"/>
+    <id>http://yoursite.com/2019/08/04/mybatis_faults/</id>
+    <published>2019-08-04T04:08:06.000Z</published>
+    <updated>2019-08-04T05:33:04.833Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="mybatis-获取主键自增长"><a href="#mybatis-获取主键自增长" class="headerlink" title="mybatis 获取主键自增长"></a>mybatis 获取主键自增长</h2><p>两个属性：useGeneratedKeys 和 keyProperty ，获得的主键直接赋值到插入的对象中，通过插入的对象获取自增的主键</p><h2 id="mabatis-多个参数的查询"><a href="#mabatis-多个参数的查询" class="headerlink" title="mabatis 多个参数的查询"></a>mabatis 多个参数的查询</h2><p>Dao 层使用@Param 注解，xml配置文件中不需要再使用parameterType 属性<br>mybatis 中desc 经常作为description 的缩写使用，查询数据时引发错误，<br>在desc两端添加反引号(数字1 前的那个键)可以解决问题</p><h2 id="mybatis-批量插入案例："><a href="#mybatis-批量插入案例：" class="headerlink" title="mybatis 批量插入案例："></a>mybatis 批量插入案例：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">&lt;insert id=<span class="string">"insertBatch"</span> parameterType=<span class="string">"java.util.List"</span>&gt;</span><br><span class="line">    INSERT INTO s_data_role_permission (id, dataRoleId, dataTypeId,</span><br><span class="line">      dataDepts, createUser, createTime</span><br><span class="line">      ) VALUES</span><br><span class="line">    &lt;foreach collection=<span class="string">"list"</span> item=<span class="string">"item"</span> index=<span class="string">"index"</span> separator=<span class="string">","</span>&gt;</span><br><span class="line">      (<span class="comment">#&#123;item.id,jdbcType=INTEGER&#125;, #&#123;item.dataRoleId,jdbcType=INTEGER&#125;,</span></span><br><span class="line">      <span class="comment">#&#123;item.dataTypeId,jdbcType=INTEGER&#125;, #&#123;item.dataDepts,jdbcType=VARCHAR&#125;,</span></span><br><span class="line">      <span class="comment">#&#123;item.createUser,jdbcType=VARCHAR&#125;, #&#123;item.createTime,jdbcType=TIMESTAMP&#125;</span></span><br><span class="line">      )</span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">  &lt;/insert&gt;</span><br></pre></td></tr></table></figure><h2 id="mybatis-批量查询案例："><a href="#mybatis-批量查询案例：" class="headerlink" title="mybatis 批量查询案例："></a>mybatis 批量查询案例：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=<span class="string">"selectDeptTreeByIds"</span> resultType=<span class="string">"com.instant.ipms.model.vo.web.sys.dept.DeptTree"</span>&gt;</span><br><span class="line">    SELECT id, parentId, name as text</span><br><span class="line">    FROM s_dept</span><br><span class="line">    WHERE id IN</span><br><span class="line">    &lt;foreach collection=<span class="string">"list"</span> open=<span class="string">"("</span>  close=<span class="string">")"</span>  index=<span class="string">"index"</span> separator=<span class="string">","</span> item=<span class="string">"item"</span>&gt;<span class="comment">#&#123;item&#125;&lt;/foreach&gt;</span></span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure><h2 id="mybatis-批量更新案例："><a href="#mybatis-批量更新案例：" class="headerlink" title="mybatis 批量更新案例："></a>mybatis 批量更新案例：</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&lt;update id=<span class="string">"updateBatch"</span> parameterType=<span class="string">"java.util.List"</span>&gt;</span><br><span class="line">    update prj_stage</span><br><span class="line">    &lt;trim prefix=<span class="string">"set"</span> suffixOverrides=<span class="string">","</span>&gt;</span><br><span class="line">      &lt;trim prefix=<span class="string">"sort =case"</span> suffix=<span class="string">"end,"</span>&gt;</span><br><span class="line">        &lt;foreach collection=<span class="string">"list"</span> item=<span class="string">"item"</span> index=<span class="string">"index"</span>&gt;</span><br><span class="line">          when id=<span class="comment">#&#123;item.id&#125; then #&#123;item.sort&#125;</span></span><br><span class="line">        &lt;/foreach&gt;</span><br><span class="line">      &lt;/trim&gt;</span><br><span class="line">    &lt;/trim&gt;</span><br><span class="line">    <span class="built_in">where</span> id <span class="keyword">in</span></span><br><span class="line">    &lt;foreach collection=<span class="string">"list"</span> index=<span class="string">"index"</span> item=<span class="string">"item"</span> separator=<span class="string">","</span> open=<span class="string">"("</span> close=<span class="string">")"</span>&gt;</span><br><span class="line">      <span class="comment">#&#123;item.id,jdbcType=INTEGER&#125;</span></span><br><span class="line">    &lt;/foreach&gt;</span><br><span class="line">&lt;/update&gt;</span><br></pre></td></tr></table></figure><h2 id="org-apache-ibatis-reflection-ReflectionException"><a href="#org-apache-ibatis-reflection-ReflectionException" class="headerlink" title="org.apache.ibatis.reflection.ReflectionException"></a>org.apache.ibatis.reflection.ReflectionException</h2><p>There is no getter for property named ‘keyword’ in ‘class java.lang.String’这样的错误<br>解决方法</p><ol><li><p>将string类型换成map类型的，然后将该keyword 放入该map中，不会报错</p></li><li><p>在接口中使用@Param(value=”xxx”) String xxx,<br>例如：public List<articleentity> fuzzyFind(@Param(value = “keyword”) String keyword);<br>同时将配置文件中的paramType 去除，也可以解决问题</articleentity></p></li><li><p>在配置文件中直接将keyword换成_parameter，问题解决。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;select id=<span class="string">"fuzzyFind"</span> resultMap=<span class="string">"articleResultMap"</span> parameterType=<span class="string">"string"</span>&gt;</span><br><span class="line">&lt;![CDATA[</span><br><span class="line">SELECT * FROM articles WHERE 1=1</span><br><span class="line">]]&gt;</span><br><span class="line">&lt;<span class="keyword">if</span> <span class="built_in">test</span>=<span class="string">"_parameter != null"</span>&gt;</span><br><span class="line">&lt;![CDATA[ AND article_title LIKE CONCAT(<span class="string">'%'</span>,<span class="string">'$&#123;_parameter&#125;'</span>,<span class="string">'%'</span>) ]]&gt;</span><br><span class="line">&lt;/<span class="keyword">if</span>&gt;</span><br><span class="line">&lt;/select&gt;</span><br></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;mybatis-获取主键自增长&quot;&gt;&lt;a href=&quot;#mybatis-获取主键自增长&quot; class=&quot;headerlink&quot; title=&quot;mybatis 获取主键自增长&quot;&gt;&lt;/a&gt;mybatis 获取主键自增长&lt;/h2&gt;&lt;p&gt;两个属性：useGeneratedK
+      
+    
+    </summary>
+    
+      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+    
+      <category term="mybatis" scheme="http://yoursite.com/categories/backGround/mybatis/"/>
+    
+    
+      <category term="mybatis" scheme="http://yoursite.com/tags/mybatis/"/>
+    
+  </entry>
+  
+</feed>
