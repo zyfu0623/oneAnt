@@ -5,9 +5,9 @@
   <subtitle>A stray ant can only move by itself</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="http://zyfu0623.github.io/"/>
   <updated>2019-12-05T14:06:06.833Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>http://zyfu0623.github.io/</id>
   
   <author>
     <name>一蚁</name>
@@ -18,12 +18,12 @@
   
   <entry>
     <title>Java世界最常用的工具类库</title>
-    <link href="http://yoursite.com/2019/12/05/Java%E4%B8%96%E7%95%8C%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/"/>
-    <id>http://yoursite.com/2019/12/05/Java世界最常用的工具类库/</id>
+    <link href="http://zyfu0623.github.io/2019/12/05/Java%E4%B8%96%E7%95%8C%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E7%B1%BB%E5%BA%93/"/>
+    <id>http://zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/</id>
     <published>2019-12-05T13:38:02.000Z</published>
     <updated>2019-12-05T14:06:06.833Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="Java世界最常用的工具类库"><a href="#Java世界最常用的工具类库" class="headerlink" title="Java世界最常用的工具类库"></a>Java世界最常用的工具类库</h2><h3 id="Apache-Commons"><a href="#Apache-Commons" class="headerlink" title="Apache Commons"></a>Apache Commons</h3><p>Apache Commons有很多子项目，常用的项目如下<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image.png" alt="Image"></p><h4 id="BeanUtils"><a href="#BeanUtils" class="headerlink" title="BeanUtils"></a>BeanUtils</h4><p>提供了一系列对java bean的操作，读取和设置属性值等<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image1.png" alt="Image1"><br>map和bean的互相转换<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image2.png" alt="Image2"><br>这种场景下map和bean的互相转换的工具类就特别有用</p><h4 id="Codec"><a href="#Codec" class="headerlink" title="Codec"></a>Codec</h4><p>常见的编码，解码方法封装<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image3.png" alt="Image3"></p><h4 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h4><p>交并差等操作<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image4.png" alt="Image4"></p><h4 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h4><p>IOUtils对IO操作的封装<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image5.png" alt="Image5"><br>FileUtils对文件操作类的封装<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image6.png" alt="Image6"></p><h4 id="Lang"><a href="#Lang" class="headerlink" title="Lang"></a>Lang</h4><p>StringUtils 以下断言测试通过<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image7.png" alt="Image7"></p><h4 id="Pair和Triple"><a href="#Pair和Triple" class="headerlink" title="Pair和Triple"></a>Pair和Triple</h4><p>当想返回2个或3个值，但这几个值没有相关性，没有必要单独封装一个对象，就可以用到如下数据结构，返回Pair或Triple对象<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image8.png" alt="Image8"></p><h3 id="Google-Guava"><a href="#Google-Guava" class="headerlink" title="Google Guava"></a>Google Guava</h3><h4 id="集合的创建"><a href="#集合的创建" class="headerlink" title="集合的创建"></a>集合的创建</h4><p><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image9.png" alt="Image9"><br>不可变集合是线程安全的，并且中途不可改变，因为add等方法是被声明为过期，并且会抛出异常<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image10.png" alt="Image10"></p><p>各种黑科技集合<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image11.png" alt="Image11"></p><p>2个键映射一个值<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image12.png" alt="Image12"></p><p>还有很多其他各种类型的集合，不再介绍  </p><h4 id="stop-watch"><a href="#stop-watch" class="headerlink" title="stop watch"></a>stop watch</h4><p>查看某段代码的运行时间<br><img src="//yoursite.com/2019/12/05/Java世界最常用的工具类库/Image13.png" alt="Image13"><br>TimeUnit 可以指定时间精度  </p><h4 id="Joda-Time"><a href="#Joda-Time" class="headerlink" title="Joda Time"></a>Joda Time</h4><p>jdk1.8之前，日期操作类常用的只有java.util.Date和java.util.Calendar，但是这2个类的易用性实在太差了，SimpleDateFormat不是线程安全的 。这就逼迫用户去选择第三方的日期操作类，Joda Time就是其中的佼佼者。后来Java自身也意识到了这个问题，于是jdk1.8大量借鉴了Joda Time的理念，推出了新的日期api，LocalDate ，LocalTime，LocalDateTime等，可以看如下文章了解一下用法、    <a href="https://blog.csdn.net/zzti_erlie/article/details/100849192" target="_blank" rel="noopener">https://blog.csdn.net/zzti_erlie/article/details/100849192</a>  2者的api很相似，如果公司的jdk版本在1.8以上推荐使用jdk1.8新推出的日期类，如果在1.8以下推荐使用Joda Time 。  </p><p>作者：小林啊<br>链接：<a href="https://juejin.im/post/5de7428de51d4557f42b4f7d" target="_blank" rel="noopener">https://juejin.im/post/5de7428de51d4557f42b4f7d</a><br>来源：掘金<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。  </p>]]></content>
+    <content type="html"><![CDATA[<h2 id="Java世界最常用的工具类库"><a href="#Java世界最常用的工具类库" class="headerlink" title="Java世界最常用的工具类库"></a>Java世界最常用的工具类库</h2><h3 id="Apache-Commons"><a href="#Apache-Commons" class="headerlink" title="Apache Commons"></a>Apache Commons</h3><p>Apache Commons有很多子项目，常用的项目如下<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image.png" alt="Image"></p><h4 id="BeanUtils"><a href="#BeanUtils" class="headerlink" title="BeanUtils"></a>BeanUtils</h4><p>提供了一系列对java bean的操作，读取和设置属性值等<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image1.png" alt="Image1"><br>map和bean的互相转换<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image2.png" alt="Image2"><br>这种场景下map和bean的互相转换的工具类就特别有用</p><h4 id="Codec"><a href="#Codec" class="headerlink" title="Codec"></a>Codec</h4><p>常见的编码，解码方法封装<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image3.png" alt="Image3"></p><h4 id="Collections"><a href="#Collections" class="headerlink" title="Collections"></a>Collections</h4><p>交并差等操作<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image4.png" alt="Image4"></p><h4 id="I-O"><a href="#I-O" class="headerlink" title="I/O"></a>I/O</h4><p>IOUtils对IO操作的封装<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image5.png" alt="Image5"><br>FileUtils对文件操作类的封装<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image6.png" alt="Image6"></p><h4 id="Lang"><a href="#Lang" class="headerlink" title="Lang"></a>Lang</h4><p>StringUtils 以下断言测试通过<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image7.png" alt="Image7"></p><h4 id="Pair和Triple"><a href="#Pair和Triple" class="headerlink" title="Pair和Triple"></a>Pair和Triple</h4><p>当想返回2个或3个值，但这几个值没有相关性，没有必要单独封装一个对象，就可以用到如下数据结构，返回Pair或Triple对象<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image8.png" alt="Image8"></p><h3 id="Google-Guava"><a href="#Google-Guava" class="headerlink" title="Google Guava"></a>Google Guava</h3><h4 id="集合的创建"><a href="#集合的创建" class="headerlink" title="集合的创建"></a>集合的创建</h4><p><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image9.png" alt="Image9"><br>不可变集合是线程安全的，并且中途不可改变，因为add等方法是被声明为过期，并且会抛出异常<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image10.png" alt="Image10"></p><p>各种黑科技集合<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image11.png" alt="Image11"></p><p>2个键映射一个值<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image12.png" alt="Image12"></p><p>还有很多其他各种类型的集合，不再介绍  </p><h4 id="stop-watch"><a href="#stop-watch" class="headerlink" title="stop watch"></a>stop watch</h4><p>查看某段代码的运行时间<br><img src="//zyfu0623.github.io/2019/12/05/Java世界最常用的工具类库/Image13.png" alt="Image13"><br>TimeUnit 可以指定时间精度  </p><h4 id="Joda-Time"><a href="#Joda-Time" class="headerlink" title="Joda Time"></a>Joda Time</h4><p>jdk1.8之前，日期操作类常用的只有java.util.Date和java.util.Calendar，但是这2个类的易用性实在太差了，SimpleDateFormat不是线程安全的 。这就逼迫用户去选择第三方的日期操作类，Joda Time就是其中的佼佼者。后来Java自身也意识到了这个问题，于是jdk1.8大量借鉴了Joda Time的理念，推出了新的日期api，LocalDate ，LocalTime，LocalDateTime等，可以看如下文章了解一下用法、    <a href="https://blog.csdn.net/zzti_erlie/article/details/100849192" target="_blank" rel="noopener">https://blog.csdn.net/zzti_erlie/article/details/100849192</a>  2者的api很相似，如果公司的jdk版本在1.8以上推荐使用jdk1.8新推出的日期类，如果在1.8以下推荐使用Joda Time 。  </p><p>作者：小林啊<br>链接：<a href="https://juejin.im/post/5de7428de51d4557f42b4f7d" target="_blank" rel="noopener">https://juejin.im/post/5de7428de51d4557f42b4f7d</a><br>来源：掘金<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。  </p>]]></content>
     
     <summary type="html">
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="background" scheme="http://yoursite.com/categories/background/"/>
+      <category term="background" scheme="http://zyfu0623.github.io/categories/background/"/>
     
     
-      <category term="工具类" scheme="http://yoursite.com/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
+      <category term="工具类" scheme="http://zyfu0623.github.io/tags/%E5%B7%A5%E5%85%B7%E7%B1%BB/"/>
     
   </entry>
   
   <entry>
     <title>Head-First-设计模式-策略模式-总结</title>
-    <link href="http://yoursite.com/2019/11/28/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/"/>
-    <id>http://yoursite.com/2019/11/28/策略模式总结/</id>
+    <link href="http://zyfu0623.github.io/2019/11/28/%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F%E6%80%BB%E7%BB%93/"/>
+    <id>http://zyfu0623.github.io/2019/11/28/策略模式总结/</id>
     <published>2019-11-27T16:13:53.000Z</published>
     <updated>2019-11-27T16:38:41.036Z</updated>
     
@@ -65,21 +65,21 @@
     
     </summary>
     
-      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://zyfu0623.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-      <category term="background" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/background/"/>
+      <category term="background" scheme="http://zyfu0623.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/background/"/>
     
     
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://zyfu0623.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-      <category term="OO设计原则" scheme="http://yoursite.com/tags/OO%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+      <category term="OO设计原则" scheme="http://zyfu0623.github.io/tags/OO%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
     
   </entry>
   
   <entry>
     <title>Head Firsh 设计模式-策略模式</title>
-    <link href="http://yoursite.com/2019/11/27/Head-Firsh-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
-    <id>http://yoursite.com/2019/11/27/Head-Firsh-设计模式-策略模式/</id>
+    <link href="http://zyfu0623.github.io/2019/11/27/Head-Firsh-%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F-%E7%AD%96%E7%95%A5%E6%A8%A1%E5%BC%8F/"/>
+    <id>http://zyfu0623.github.io/2019/11/27/Head-Firsh-设计模式-策略模式/</id>
     <published>2019-11-27T14:37:24.000Z</published>
     <updated>2019-11-27T16:38:41.041Z</updated>
     
@@ -96,21 +96,21 @@
     
     </summary>
     
-      <category term="设计模式" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://zyfu0623.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-      <category term="background" scheme="http://yoursite.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/background/"/>
+      <category term="background" scheme="http://zyfu0623.github.io/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/background/"/>
     
     
-      <category term="设计模式" scheme="http://yoursite.com/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+      <category term="设计模式" scheme="http://zyfu0623.github.io/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
     
-      <category term="OO设计原则" scheme="http://yoursite.com/tags/OO%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
+      <category term="OO设计原则" scheme="http://zyfu0623.github.io/tags/OO%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99/"/>
     
   </entry>
   
   <entry>
     <title>位运算和逻辑运算</title>
-    <link href="http://yoursite.com/2019/11/27/%E4%BD%8D%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/"/>
-    <id>http://yoursite.com/2019/11/27/位运算和逻辑运算/</id>
+    <link href="http://zyfu0623.github.io/2019/11/27/%E4%BD%8D%E8%BF%90%E7%AE%97%E5%92%8C%E9%80%BB%E8%BE%91%E8%BF%90%E7%AE%97/"/>
+    <id>http://zyfu0623.github.io/2019/11/27/位运算和逻辑运算/</id>
     <published>2019-11-27T02:01:48.000Z</published>
     <updated>2019-11-27T02:05:19.428Z</updated>
     
@@ -133,17 +133,17 @@
     
     </summary>
     
-      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+      <category term="backGround" scheme="http://zyfu0623.github.io/categories/backGround/"/>
     
     
-      <category term="二进制" scheme="http://yoursite.com/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
+      <category term="二进制" scheme="http://zyfu0623.github.io/tags/%E4%BA%8C%E8%BF%9B%E5%88%B6/"/>
     
   </entry>
   
   <entry>
     <title>Hello World</title>
-    <link href="http://yoursite.com/2019/11/03/hello-world/"/>
-    <id>http://yoursite.com/2019/11/03/hello-world/</id>
+    <link href="http://zyfu0623.github.io/2019/11/03/hello-world/"/>
+    <id>http://zyfu0623.github.io/2019/11/03/hello-world/</id>
     <published>2019-11-03T05:56:18.616Z</published>
     <updated>2019-08-04T04:58:49.862Z</updated>
     
@@ -165,8 +165,8 @@
   
   <entry>
     <title>Maven指令记录</title>
-    <link href="http://yoursite.com/2019/08/04/maven_orders/"/>
-    <id>http://yoursite.com/2019/08/04/maven_orders/</id>
+    <link href="http://zyfu0623.github.io/2019/08/04/maven_orders/"/>
+    <id>http://zyfu0623.github.io/2019/08/04/maven_orders/</id>
     <published>2019-08-04T05:11:25.000Z</published>
     <updated>2019-08-04T06:31:38.197Z</updated>
     
@@ -182,19 +182,19 @@
     
     </summary>
     
-      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+      <category term="backGround" scheme="http://zyfu0623.github.io/categories/backGround/"/>
     
-      <category term="Maven" scheme="http://yoursite.com/categories/backGround/Maven/"/>
+      <category term="Maven" scheme="http://zyfu0623.github.io/categories/backGround/Maven/"/>
     
     
-      <category term="Maven" scheme="http://yoursite.com/tags/Maven/"/>
+      <category term="Maven" scheme="http://zyfu0623.github.io/tags/Maven/"/>
     
   </entry>
   
   <entry>
     <title>初识springBoot</title>
-    <link href="http://yoursite.com/2019/08/04/new_springBoot/"/>
-    <id>http://yoursite.com/2019/08/04/new_springBoot/</id>
+    <link href="http://zyfu0623.github.io/2019/08/04/new_springBoot/"/>
+    <id>http://zyfu0623.github.io/2019/08/04/new_springBoot/</id>
     <published>2019-08-04T05:07:10.000Z</published>
     <updated>2019-08-04T05:33:05.247Z</updated>
     
@@ -213,19 +213,19 @@
     
     </summary>
     
-      <category term="springBoot" scheme="http://yoursite.com/categories/springBoot/"/>
+      <category term="springBoot" scheme="http://zyfu0623.github.io/categories/springBoot/"/>
     
     
-      <category term="backGround" scheme="http://yoursite.com/tags/backGround/"/>
+      <category term="backGround" scheme="http://zyfu0623.github.io/tags/backGround/"/>
     
-      <category term="springBoot" scheme="http://yoursite.com/tags/springBoot/"/>
+      <category term="springBoot" scheme="http://zyfu0623.github.io/tags/springBoot/"/>
     
   </entry>
   
   <entry>
     <title>【javaSE】</title>
-    <link href="http://yoursite.com/2019/08/04/jav_se/"/>
-    <id>http://yoursite.com/2019/08/04/jav_se/</id>
+    <link href="http://zyfu0623.github.io/2019/08/04/jav_se/"/>
+    <id>http://zyfu0623.github.io/2019/08/04/jav_se/</id>
     <published>2019-08-04T05:04:46.000Z</published>
     <updated>2019-08-04T05:33:04.972Z</updated>
     
@@ -241,19 +241,19 @@
     
     </summary>
     
-      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+      <category term="backGround" scheme="http://zyfu0623.github.io/categories/backGround/"/>
     
-      <category term="javaSE" scheme="http://yoursite.com/categories/backGround/javaSE/"/>
+      <category term="javaSE" scheme="http://zyfu0623.github.io/categories/backGround/javaSE/"/>
     
     
-      <category term="java" scheme="http://yoursite.com/tags/java/"/>
+      <category term="java" scheme="http://zyfu0623.github.io/tags/java/"/>
     
   </entry>
   
   <entry>
     <title>EL表达式不起作用问题排查</title>
-    <link href="http://yoursite.com/2019/08/04/el_error/"/>
-    <id>http://yoursite.com/2019/08/04/el_error/</id>
+    <link href="http://zyfu0623.github.io/2019/08/04/el_error/"/>
+    <id>http://zyfu0623.github.io/2019/08/04/el_error/</id>
     <published>2019-08-04T04:49:39.000Z</published>
     <updated>2019-08-04T05:33:05.202Z</updated>
     
@@ -269,19 +269,19 @@
     
     </summary>
     
-      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+      <category term="backGround" scheme="http://zyfu0623.github.io/categories/backGround/"/>
     
-      <category term="jsp" scheme="http://yoursite.com/categories/backGround/jsp/"/>
+      <category term="jsp" scheme="http://zyfu0623.github.io/categories/backGround/jsp/"/>
     
     
-      <category term="jsp" scheme="http://yoursite.com/tags/jsp/"/>
+      <category term="jsp" scheme="http://zyfu0623.github.io/tags/jsp/"/>
     
   </entry>
   
   <entry>
     <title>文件下载中文名称乱码问题</title>
-    <link href="http://yoursite.com/2019/08/04/downFile_chinese/"/>
-    <id>http://yoursite.com/2019/08/04/downFile_chinese/</id>
+    <link href="http://zyfu0623.github.io/2019/08/04/downFile_chinese/"/>
+    <id>http://zyfu0623.github.io/2019/08/04/downFile_chinese/</id>
     <published>2019-08-04T04:45:37.000Z</published>
     <updated>2019-08-04T05:33:04.923Z</updated>
     
@@ -296,19 +296,19 @@
     
     </summary>
     
-      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+      <category term="backGround" scheme="http://zyfu0623.github.io/categories/backGround/"/>
     
-      <category term="文件下载" scheme="http://yoursite.com/categories/backGround/%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/"/>
+      <category term="文件下载" scheme="http://zyfu0623.github.io/categories/backGround/%E6%96%87%E4%BB%B6%E4%B8%8B%E8%BD%BD/"/>
     
     
-      <category term="spring" scheme="http://yoursite.com/tags/spring/"/>
+      <category term="spring" scheme="http://zyfu0623.github.io/tags/spring/"/>
     
   </entry>
   
   <entry>
     <title>【MySQL】事务没有提交导致锁等待</title>
-    <link href="http://yoursite.com/2019/08/04/mysql_transations/"/>
-    <id>http://yoursite.com/2019/08/04/mysql_transations/</id>
+    <link href="http://zyfu0623.github.io/2019/08/04/mysql_transations/"/>
+    <id>http://zyfu0623.github.io/2019/08/04/mysql_transations/</id>
     <published>2019-08-04T04:34:08.000Z</published>
     <updated>2019-08-04T05:33:05.350Z</updated>
     
@@ -324,19 +324,19 @@
     
     </summary>
     
-      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+      <category term="backGround" scheme="http://zyfu0623.github.io/categories/backGround/"/>
     
-      <category term="MySQL" scheme="http://yoursite.com/categories/backGround/MySQL/"/>
+      <category term="MySQL" scheme="http://zyfu0623.github.io/categories/backGround/MySQL/"/>
     
     
-      <category term="MySQL" scheme="http://yoursite.com/tags/MySQL/"/>
+      <category term="MySQL" scheme="http://zyfu0623.github.io/tags/MySQL/"/>
     
   </entry>
   
   <entry>
     <title>linux服务器tomcat启动但浏览器访问不了</title>
-    <link href="http://yoursite.com/2019/08/04/toStartTomcat/"/>
-    <id>http://yoursite.com/2019/08/04/toStartTomcat/</id>
+    <link href="http://zyfu0623.github.io/2019/08/04/toStartTomcat/"/>
+    <id>http://zyfu0623.github.io/2019/08/04/toStartTomcat/</id>
     <published>2019-08-04T04:31:28.000Z</published>
     <updated>2019-08-04T05:33:04.869Z</updated>
     
@@ -351,23 +351,23 @@
     
     </summary>
     
-      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+      <category term="backGround" scheme="http://zyfu0623.github.io/categories/backGround/"/>
     
-      <category term="linux" scheme="http://yoursite.com/categories/backGround/linux/"/>
+      <category term="linux" scheme="http://zyfu0623.github.io/categories/backGround/linux/"/>
     
-      <category term="tomcat" scheme="http://yoursite.com/categories/backGround/linux/tomcat/"/>
+      <category term="tomcat" scheme="http://zyfu0623.github.io/categories/backGround/linux/tomcat/"/>
     
     
-      <category term="linux" scheme="http://yoursite.com/tags/linux/"/>
+      <category term="linux" scheme="http://zyfu0623.github.io/tags/linux/"/>
     
-      <category term="tomcat" scheme="http://yoursite.com/tags/tomcat/"/>
+      <category term="tomcat" scheme="http://zyfu0623.github.io/tags/tomcat/"/>
     
   </entry>
   
   <entry>
     <title>idea加快创建Maven项目速度</title>
-    <link href="http://yoursite.com/2019/08/04/idea_create_maven/"/>
-    <id>http://yoursite.com/2019/08/04/idea_create_maven/</id>
+    <link href="http://zyfu0623.github.io/2019/08/04/idea_create_maven/"/>
+    <id>http://zyfu0623.github.io/2019/08/04/idea_create_maven/</id>
     <published>2019-08-04T04:29:19.000Z</published>
     <updated>2019-08-04T05:33:05.159Z</updated>
     
@@ -383,23 +383,23 @@
     
     </summary>
     
-      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+      <category term="backGround" scheme="http://zyfu0623.github.io/categories/backGround/"/>
     
-      <category term="idea" scheme="http://yoursite.com/categories/backGround/idea/"/>
+      <category term="idea" scheme="http://zyfu0623.github.io/categories/backGround/idea/"/>
     
-      <category term="Maven" scheme="http://yoursite.com/categories/backGround/idea/Maven/"/>
+      <category term="Maven" scheme="http://zyfu0623.github.io/categories/backGround/idea/Maven/"/>
     
     
-      <category term="idea" scheme="http://yoursite.com/tags/idea/"/>
+      <category term="idea" scheme="http://zyfu0623.github.io/tags/idea/"/>
     
-      <category term="maven" scheme="http://yoursite.com/tags/maven/"/>
+      <category term="maven" scheme="http://zyfu0623.github.io/tags/maven/"/>
     
   </entry>
   
   <entry>
     <title>前端js常见问题</title>
-    <link href="http://yoursite.com/2019/08/04/js_faults/"/>
-    <id>http://yoursite.com/2019/08/04/js_faults/</id>
+    <link href="http://zyfu0623.github.io/2019/08/04/js_faults/"/>
+    <id>http://zyfu0623.github.io/2019/08/04/js_faults/</id>
     <published>2019-08-04T04:20:45.000Z</published>
     <updated>2019-08-04T05:33:05.302Z</updated>
     
@@ -414,23 +414,23 @@
     
     </summary>
     
-      <category term="forward" scheme="http://yoursite.com/categories/forward/"/>
+      <category term="forward" scheme="http://zyfu0623.github.io/categories/forward/"/>
     
-      <category term="js" scheme="http://yoursite.com/categories/forward/js/"/>
+      <category term="js" scheme="http://zyfu0623.github.io/categories/forward/js/"/>
     
-      <category term="jQuery" scheme="http://yoursite.com/categories/forward/js/jQuery/"/>
+      <category term="jQuery" scheme="http://zyfu0623.github.io/categories/forward/js/jQuery/"/>
     
     
-      <category term="jQuery" scheme="http://yoursite.com/tags/jQuery/"/>
+      <category term="jQuery" scheme="http://zyfu0623.github.io/tags/jQuery/"/>
     
-      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+      <category term="js" scheme="http://zyfu0623.github.io/tags/js/"/>
     
   </entry>
   
   <entry>
     <title>mybatis采坑</title>
-    <link href="http://yoursite.com/2019/08/04/mybatis_faults/"/>
-    <id>http://yoursite.com/2019/08/04/mybatis_faults/</id>
+    <link href="http://zyfu0623.github.io/2019/08/04/mybatis_faults/"/>
+    <id>http://zyfu0623.github.io/2019/08/04/mybatis_faults/</id>
     <published>2019-08-04T04:08:06.000Z</published>
     <updated>2019-08-04T05:33:04.833Z</updated>
     
@@ -445,12 +445,12 @@
     
     </summary>
     
-      <category term="backGround" scheme="http://yoursite.com/categories/backGround/"/>
+      <category term="backGround" scheme="http://zyfu0623.github.io/categories/backGround/"/>
     
-      <category term="mybatis" scheme="http://yoursite.com/categories/backGround/mybatis/"/>
+      <category term="mybatis" scheme="http://zyfu0623.github.io/categories/backGround/mybatis/"/>
     
     
-      <category term="mybatis" scheme="http://yoursite.com/tags/mybatis/"/>
+      <category term="mybatis" scheme="http://zyfu0623.github.io/tags/mybatis/"/>
     
   </entry>
   
